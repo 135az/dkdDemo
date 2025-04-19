@@ -1,19 +1,20 @@
 package com.dkd.manage.service;
 
-import java.util.List;
 import com.dkd.manage.domain.Node;
+import com.dkd.manage.domain.vo.NodeVo;
+
+import java.util.List;
 
 /**
  * 点位管理Service接口
- * 
+ *
  * @author azheng
  * @date 2025-04-19
  */
-public interface INodeService 
-{
+public interface INodeService {
     /**
      * 查询点位管理
-     * 
+     *
      * @param id 点位管理主键
      * @return 点位管理
      */
@@ -21,7 +22,7 @@ public interface INodeService
 
     /**
      * 查询点位管理列表
-     * 
+     *
      * @param node 点位管理
      * @return 点位管理集合
      */
@@ -29,7 +30,7 @@ public interface INodeService
 
     /**
      * 新增点位管理
-     * 
+     *
      * @param node 点位管理
      * @return 结果
      */
@@ -37,7 +38,7 @@ public interface INodeService
 
     /**
      * 修改点位管理
-     * 
+     *
      * @param node 点位管理
      * @return 结果
      */
@@ -45,7 +46,7 @@ public interface INodeService
 
     /**
      * 批量删除点位管理
-     * 
+     *
      * @param ids 需要删除的点位管理主键集合
      * @return 结果
      */
@@ -53,9 +54,17 @@ public interface INodeService
 
     /**
      * 删除点位管理信息
-     * 
+     *
      * @param id 点位管理主键
      * @return 结果
      */
     public int deleteNodeById(Long id);
+
+    /**
+     * 查询点位管理列表
+     *
+     * @param node
+     * @return NodeVo集合
+     */
+    public List<NodeVo> selectNodeVoList(Node node);
 }
